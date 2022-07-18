@@ -2,7 +2,7 @@ package com.example.fanshop.model.entity;
 
 
 import com.example.fanshop.model.enums.CategoryEnum;
-import com.example.fanshop.model.enums.SexEnum;
+import com.example.fanshop.model.enums.BrandEnum;
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Type;
 
@@ -34,7 +34,7 @@ public class OfferEntity {
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    private SexEnum sex;
+    private BrandEnum brand;
 
     private int year;
 
@@ -89,12 +89,12 @@ public class OfferEntity {
         return this;
     }
 
-    public SexEnum getSex() {
-        return sex;
+    public BrandEnum getBrand() {
+        return brand;
     }
 
-    public OfferEntity setSex(SexEnum sex) {
-        this.sex = sex;
+    public OfferEntity setBrand(BrandEnum brand) {
+        this.brand = brand;
         return this;
     }
 
@@ -133,7 +133,7 @@ public class OfferEntity {
                 ", imageUrl='" + imageUrl + '\'' +
                 ", price=" + price +
                 ", description='" + description + '\'' +
-                ", sex=" + sex +
+                ", brand=" + brand +
                 ", year=" + year +
                 ", model=" + model +
                 ", seller=" + seller +

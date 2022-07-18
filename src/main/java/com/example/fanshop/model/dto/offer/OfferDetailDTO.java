@@ -1,7 +1,7 @@
 package com.example.fanshop.model.dto.offer;
 
 import com.example.fanshop.model.enums.CategoryEnum;
-import com.example.fanshop.model.enums.SexEnum;
+import com.example.fanshop.model.enums.BrandEnum;
 
 import java.math.BigDecimal;
 
@@ -13,11 +13,14 @@ public class OfferDetailDTO {
 
     private String description;
 
-    private SexEnum sex;
+    private BrandEnum brand;
 
     private String imageUrl;
 
     private CategoryEnum category;
+
+    public OfferDetailDTO() {
+    }
 
     public BigDecimal getPrice() {
         return price;
@@ -46,12 +49,12 @@ public class OfferDetailDTO {
         return this;
     }
 
-    public SexEnum getSex() {
-        return sex;
+    public BrandEnum getBrand() {
+        return brand;
     }
 
-    public OfferDetailDTO setSex(SexEnum sex) {
-        this.sex = sex;
+    public OfferDetailDTO setBrand(BrandEnum brand) {
+        this.brand = brand;
         return this;
     }
 
@@ -71,5 +74,10 @@ public class OfferDetailDTO {
     public OfferDetailDTO setCategory(CategoryEnum category) {
         this.category = category;
         return this;
+    }
+
+
+    public String getOfferHighlight() {
+        return this.year + " " + this.brand + " " + this.category;
     }
 }

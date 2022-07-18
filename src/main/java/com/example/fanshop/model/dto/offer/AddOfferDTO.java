@@ -1,7 +1,7 @@
 package com.example.fanshop.model.dto.offer;
 
 import com.example.fanshop.model.enums.CategoryEnum;
-import com.example.fanshop.model.enums.SexEnum;
+import com.example.fanshop.model.enums.BrandEnum;
 
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotEmpty;
@@ -29,7 +29,7 @@ public class AddOfferDTO {
     private String description;
 
     @NotNull
-    private SexEnum sex;
+    private BrandEnum brand;
 
     @NotEmpty
     private String imageUrl;
@@ -79,12 +79,12 @@ public class AddOfferDTO {
         return this;
     }
 
-    public SexEnum getSex() {
-        return sex;
+    public BrandEnum getBrand() {
+        return brand;
     }
 
-    public AddOfferDTO setSex(SexEnum sex) {
-        this.sex = sex;
+    public AddOfferDTO setBrand(BrandEnum brand) {
+        this.brand = brand;
         return this;
     }
 
